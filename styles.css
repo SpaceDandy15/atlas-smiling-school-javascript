@@ -909,6 +909,7 @@
   /* Mobile styles */
 }
 
+/* Loader styling */
 .loader {
   border: 10px solid #f3f3f3;
   border-top: 10px solid #C271FF;
@@ -922,4 +923,30 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Overlay loader for slide change */
+.loader-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Dim overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: none; /* Ensure carousel arrows still work */
+}
+
+/* Hide it initially */
+#slide-loader.d-none {
+  display: none !important;
+}
+
+/* Optional dark background for better visibility */
+#slide-loader {
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none; /* So arrows still work */
 }
