@@ -37,7 +37,7 @@
 
 .btn:hover,
 .btn:active {
-  opacity: var(--opacity-value);
+  opacity: 0.9;
 }
 
 /* Header / Hero Styles */
@@ -899,4 +899,12 @@
   .results .card {
     width: 90vw;
   }
+}
+
+@media (max-width: 768px) {
+  /* Tablet styles */
+}
+
+@media (max-width: 576px) {
+  /* Mobile styles */
 }
