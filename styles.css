@@ -909,7 +909,6 @@
   /* Mobile styles */
 }
 
-/* Loader styling */
 .loader {
   border: 10px solid #f3f3f3;
   border-top: 10px solid #C271FF;
@@ -925,28 +924,34 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Overlay loader for slide change */
-.loader-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Dim overlay */
+#carousel-loader {
+  text-align: center;
+  margin-top: 20px;
+  display: none; /* Start hidden */
+}
+
+#carousel-loader.active {
+  display: block;
+}
+
+.scroll-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+.scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.card-wrapper {
+  flex: 0 0 auto;
+  width: 250px; /* Adjust based on card size */
+  margin-right: 16px;
+}
+
+#tutorials-carousel-inner {
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 1000;
-  pointer-events: none; /* Ensure carousel arrows still work */
-}
-
-/* Hide it initially */
-#slide-loader.d-none {
-  display: none !important;
-}
-
-/* Optional dark background for better visibility */
-#slide-loader {
-  background-color: rgba(0, 0, 0, 0.3);
-  pointer-events: none; /* So arrows still work */
 }
