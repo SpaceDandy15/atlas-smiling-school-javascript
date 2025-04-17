@@ -955,3 +955,25 @@
   display: flex;
   align-items: center;
 }
+
+#latest-carousel-inner {
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+}
+
+#latest-carousel-inner > .card {
+  flex: 0 0 calc(25% - 1rem); /* 4 cards per row, with spacing */
+  min-width: 250px;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+}
+.loader-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
